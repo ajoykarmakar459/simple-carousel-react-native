@@ -26,7 +26,8 @@ export default class Carousel extends Component {
             color = '#ffa500',
             dimmedColor = '#d3d3d3',
             bubbleWidth = 10,
-            bubbleHeight = 10
+            bubbleHeight = 10,
+            bubbleOffSet = 0
         } = this.props;
 
         let bubbles = [];
@@ -37,6 +38,8 @@ export default class Carousel extends Component {
             backgroundColor: dimmedColor,
             borderRadius: 15,
             alignSelf: 'center',
+            marginTop:bubbleOffSet,
+            marginHorizontal:2
         }
 
         const filledBubble = {
@@ -45,6 +48,8 @@ export default class Carousel extends Component {
             backgroundColor: color,
             borderRadius: 15,
             alignSelf: 'center',
+            marginTop:bubbleOffSet,
+            marginHorizontal:2
         }
 
         for (var i=0; i<children.length; i++) {
